@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Future Sync</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="future-sync-page">
+  <div class="topbar future-topbar">
+    <div class="topbar-inner">
+      <div class="brand"><span>🔐</span><div>Future Sync</div></div>
+      <nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="past.html">Past Map</a>
+        <a href="present.html">Present Scenes</a>
+        <a class="active" href="future.html">Future Sync</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="future-sync-shell">
+    <section class="future-sync-card" id="future-sync-panel">
+      <h1 id="future-sync-title">FUTURE SYNC CHECK</h1>
+      <p id="future-sync-copy">Hold the button briefly to synchronize our future timelines.</p>
+      <button class="future-sync-ring" type="button" id="future-sync-hold" aria-label="Hold to synchronize future timelines">
+        <span id="future-sync-icon">🫆</span>
+      </button>
+      <div class="future-sync-progress" aria-hidden="true"><span id="future-sync-progress-fill"></span></div>
+      <small id="future-sync-progress-label">Hold to sync...</small>
+      <div class="future-sync-status" id="future-sync-status">🔒 PERFECTLY ALIGNED</div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

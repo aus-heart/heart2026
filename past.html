@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Past Memories Map</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+
+<body class="past-page">
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand"><span>🗺️</span>
+        <div>Past Memories</div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a class="active" href="past.html">Past Map</a>
+        <a href="present.html">Present Scenes</a>
+        <a href="future.html">Future Sync</a>
+      </nav>
+    </div>
+  </div>
+
+  <header>
+    <div class="container">
+      <h1>Memories Map</h1>
+      <p>
+        Explore the hearts scattered across the map. While some locations are random, the love in every message is real.
+      </p>
+    </div>
+  </header>
+
+  <main class="past-hero-main">
+    <section class="past-full-map romantic-panel">
+<!--       <div class="past-headline">
+        <h2>Our Story Across The World</h2>
+        <p>Tap each heart to open the memory from that place.</p>
+      </div> -->
+      <div class="map-canvas past-canvas" data-map="past"></div>
+      <!-- <p class="scene-helper">Tip: update <code>mapConfig.past</code> in <code>app.js</code>.</p> -->
+    </section>
+  </main>
+
+  <footer>Click each heart to relive that moment.</footer>
+  <script src="app.js"></script>
+</body>
+
+</html>

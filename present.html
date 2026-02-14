@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Present Virtual Date Scenes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="present-page">
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span>🎞️</span>
+        <div>Present Scenes</div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="past.html">Past Map</a>
+        <a class="active" href="present.html">Present Scenes</a>
+        <a href="future.html">Future Sync</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="immersive-page">
+    <section class="immersive-sidebar">
+      <h2>Choose a destination</h2>
+      <p>Pick a location for a little preview hint, then enter the full scene.</p>
+
+      <div class="scene-grid">
+        <div class="scene-card" data-scene="sakura">
+          <div class="scene-hint hint-sakura"></div>
+          <span class="scene-tag">Soft petals</span>
+          <h3>Japan · Sakura Rain</h3>
+          <p>A dreamy pink night where falling blossoms hide sweet words.</p>
+          <button class="button" data-scene-select="sakura" aria-pressed="false">Enter scene</button>
+        </div>
+        <div class="scene-card" data-scene="stars">
+          <div class="scene-hint hint-stars"></div>
+          <span class="scene-tag">Sky romance</span>
+          <h3>Stars · Wish Night</h3>
+          <p>Hover to watch stars gather into cute shapes with changing messages.</p>
+          <button class="button" data-scene-select="stars" aria-pressed="false">Enter scene</button>
+        </div>
+        <div class="scene-card" data-scene="central-park">
+          <div class="scene-hint hint-park"></div>
+          <span class="scene-tag">Lakeside glow</span>
+          <h3>Central Park · Boat</h3>
+          <p>Fireflies dance around the lake and tap them to play the soundtrack.</p>
+          <button class="button" data-scene-select="central-park" aria-pressed="false">Enter scene</button>
+        </div>
+        <div class="scene-card" data-scene="paris">
+          <div class="scene-hint hint-paris"></div>
+          <span class="scene-tag">Cinema night</span>
+          <h3>Paris · Film Set</h3>
+          <p>A movie-style set where you can listen to philosophy dialog.</p>
+          <button class="button" data-scene-select="paris" aria-pressed="false">Enter scene</button>
+        </div>
+
+        <div class="scene-card" data-scene="late-night-sync">
+          <div class="scene-hint hint-sync"></div>
+          <span class="scene-tag">Timeline mode</span>
+          <h3>Late Night · Timeline Sync</h3>
+          <p>Daynight and midnight sync in one moment.</p>
+          <button class="button" data-scene-select="late-night-sync" aria-pressed="false">Enter scene</button>
+        </div>
+        <div class="scene-card" data-scene="london-rain">
+          <div class="scene-hint hint-london"></div>
+          <span class="scene-tag">Rain walk</span>
+          <h3>London · Rain Walk</h3>
+          <p>Umbrella-lit streets with gentle rain lines.</p>
+          <button class="button" data-scene-select="london-rain" aria-pressed="false">Enter scene</button>
+        </div>
+        <div class="scene-card" data-scene="shanghai">
+          <div class="scene-hint hint-shanghai"></div>
+          <span class="scene-tag">City lanterns</span>
+          <h3>Shanghai · Cuisine</h3>
+          <p>A cozy food journey with local cuisine facts and hybrid architecture.</p>
+          <button class="button" data-scene-select="shanghai" aria-pressed="false">Enter scene</button>
+        </div>
+        <div class="scene-card" data-scene="animal-kingdom">
+          <div class="scene-hint hint-animal"></div>
+          <span class="scene-tag">Cute dance</span>
+          <h3>Animal Kingdom · Parrot Dance</h3>
+          <p>A dreamy jungle where dancing lovebird celebrate our rhythm.</p>
+          <button class="button" data-scene-select="animal-kingdom" aria-pressed="false">Enter scene</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="immersive-stage" id="immersive-stage">
+      <button class="button immersive-exit" type="button" id="exit-immersive">← Return</button>
+      <div class="immersive-image" id="stage-image"></div>
+      <div class="immersive-overlay"></div>
+      <div class="rain-layer" id="rain-layer"></div>
+      <div class="london-status" id="london-status"></div>
+      <div class="paris-cinematic" id="paris-cinematic">
+        <button class="paris-return" type="button" id="paris-return">← Return</button>
+        <div class="paris-header">
+          <h2>Paris Movie Set 🎬</h2>
+          <p>Click play to hear the dialogue...</p>
+        </div>
+        <div class="paris-dialogue" id="paris-dialogue">“Who says Valentine’s Day can’t be deep? -> Let’s dive into something intriguing — existentialism, absurdism… and love?” </div>
+        <button class="button primary paris-play" type="button" id="paris-play">▶ Play Scene</button>
+      </div>
+
+      <div class="immersive-top">
+        <h1 id="stage-title"></h1>
+        <p id="stage-subtitle"></p>
+      </div>
+
+      <div id="stage-hotspots"></div>
+      <div class="stars-heart-message" id="stars-heart-message">You are my forever wish.</div>
+      <div id="lantern-dock" class="lantern-dock"></div>
+
+      <div class="immersive-log magic-message" id="stage-log">Step into our world and feel the connection in every detail.</div>
+
+      
+
+    </section>
+  </main>
+
+
+  <div class="music-dock" aria-label="Music controls">
+    <button class="music-fab" type="button" id="music-fab" aria-expanded="false" aria-controls="music-panel" title="Open music controls">🎵</button>
+    <div class="music-panel" id="music-panel">
+      <p id="player-now-playing">Romantic Piano Melody · Background Music</p>
+      <div class="music-panel-controls">
+        <button class="music-mini-btn" type="button" id="player-stop" aria-label="Stop">⏹</button>
+        <button class="music-mini-btn" type="button" id="player-toggle" aria-label="Play or pause">▶</button>
+        <button class="music-mini-btn" type="button" id="player-next" aria-label="Next song">⏭</button>
+      </div>
+      <input id="music-progress" class="music-progress" type="range" min="0" max="100" value="52" aria-label="Decorative music progress" />
+    </div>
+  </div>
+
+  <footer>
+    Full-stage immersive mode: one selected place becomes the whole dating world.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
